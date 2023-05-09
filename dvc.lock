@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  generate_test_data:
+    cmd: python src/generate_text_data.py
+    deps:
+    - path: src/generate_text_data.py
+      md5: 073528899c4f2a08aed5489d8b84fc4a
+      size: 1070
+    params:
+      params.yaml:
+        hyper: 5
+        train_set_limit: 1000
+        train_set_no_of_records: 150
+  fit_create_model:
+    cmd: python src/fit_create_model.py
+    deps:
+    - path: src/fit_create_model.py
+      md5: 975b0ad3c652e54ce784e0335d2aaa4f
+      size: 800

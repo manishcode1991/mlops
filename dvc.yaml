@@ -1,0 +1,13 @@
+stages:
+  generate_test_data:
+    cmd: python src/generate_text_data.py
+    deps:
+    - src/generate_text_data.py
+    params:
+    - hyper
+    - train_set_limit
+    - train_set_no_of_records
+  fit_create_model:
+    cmd: python src/fit_create_model.py
+    deps:
+    - src/fit_create_model.py
